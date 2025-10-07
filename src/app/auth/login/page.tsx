@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Suspense } from 'react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Header from '@/components/layout/Header'
@@ -11,7 +11,7 @@ import Input from '@/components/ui/Input'
 import { useAuthContext } from '@/contexts/AuthContext'
 import { Eye, EyeOff, Mail, Lock, ArrowRight, AlertCircle, CheckCircle } from 'lucide-react'
 
-export default function LoginPage() {
+function LoginContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const { signIn, resetPassword } = useAuthContext()
@@ -349,5 +349,24 @@ export default function LoginPage() {
 
       <Footer />
     </main>
+  )
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={
+      <main className="min-h-screen bg-gray-50">
+        <Header />
+        <div className="flex items-center justify-center min-h-[60vh]">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-sage-600 mx-auto mb-4"></div>
+            <p className="text-corporate-light">Carregando...</p>
+          </div>
+        </div>
+        <Footer />
+      </main>
+    }>
+      <LoginContent />
+    </Suspense>
   )
 }
