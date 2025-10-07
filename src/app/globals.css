@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-poppins text-corporate-dark bg-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat;
+  }
+  
+  h1 {
+    @apply text-h1 md:text-h1-mobile;
+  }
+  
+  h2 {
+    @apply text-h2 md:text-h2-mobile;
+  }
+  
+  h3 {
+    @apply text-h3 md:text-h3-mobile;
+  }
+  
+  h4 {
+    @apply text-h4;
+  }
+  
+  p {
+    @apply text-body;
+  }
+  
+  small {
+    @apply text-small;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-accent-green hover:bg-accent-green/90 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent-green/50;
+  }
+  
+  .btn-secondary {
+    @apply bg-sage-500 hover:bg-sage-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sage-500/50;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-sage-500 text-sage-600 hover:bg-sage-500 hover:text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-sage-500/50;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6 transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply hover:transform hover:-translate-y-1 hover:shadow-xl;
+  }
+  
+  .gradient-sage {
+    background: linear-gradient(135deg, #87A96B 0%, #C1D8A9 100%);
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-sage-600 to-sage-400 bg-clip-text text-transparent;
+  }
+  
+  .skeleton-loading {
+    @apply animate-skeleton bg-gray-200 rounded;
+  }
+  
+  .fade-in-up {
+    @apply animate-fade-in-up;
+  }
+  
+  .section-padding {
+    @apply py-20 lg:py-24;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sage-500/50 focus:border-sage-500 transition-colors duration-200;
+  }
+  
+  .nav-link {
+    @apply text-corporate-dark hover:text-sage-600 font-medium transition-colors duration-200 relative;
+  }
+  
+  .nav-link::after {
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-sage-500 transition-all duration-300;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes skeleton {
+  0% {
+    background-color: #f0f0f0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 640px) {
+  .section-padding {
+    @apply py-12;
+  }
+}
+
+/* Focus styles for accessibility */
+.focus-visible:focus {
+  @apply outline-none ring-2 ring-sage-500/50 ring-offset-2;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
