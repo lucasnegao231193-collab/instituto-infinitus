@@ -1,76 +1,67 @@
 import React from 'react'
+import Image from 'next/image'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import { Card, CardContent } from '@/components/ui/Card'
 import Button from '@/components/ui/Button'
-import { Mail, Linkedin, Phone, MapPin } from 'lucide-react'
+import { Mail, Instagram, Phone, MapPin } from 'lucide-react'
 
 export default function EquipePage() {
   const diretoria = [
     {
       id: 1,
-      nome: 'Maria Silva Santos',
+      nome: 'Janio Vieira',
       cargo: 'Presidente',
-      bio: 'Especialista em gestão de ONGs com mais de 15 anos de experiência em projetos sociais. Formada em Administração Pública pela USP e pós-graduada em Gestão do Terceiro Setor.',
+      bio: 'Diretor comercial da Clinica de Especialidades Médicas Unitá Class Saúde e Relações Publicas.',
       email: 'maria.silva@institutoinfinitus.org',
-      phone: '(11) 99999-1111',
-      linkedin: 'https://linkedin.com/in/mariasilva',
-      foto: 'MS',
-      cor: 'from-sage-500 to-sage-600',
-      experiencia: '15 anos',
-      formacao: 'Administração Pública - USP'
+      phone: '(13) 97411-7251',
+      instagram: 'https://instagram.com/mariasilva',
+      foto: '/equipe/janio-vieira.png',
+      cor: 'from-sage-500 to-sage-600'
     },
     {
       id: 2,
-      nome: 'João Pedro Costa',
+      nome: 'Paulo Rogério Damin',
       cargo: 'Vice-Presidente',
-      bio: 'Educador social com paixão por transformar vidas através da educação. Pedagogo pela UNICAMP, especialista em Educação Social e mestre em Políticas Públicas.',
-      email: 'joao.costa@institutoinfinitus.org',
-      phone: '(11) 99999-2222',
-      linkedin: 'https://linkedin.com/in/joaocosta',
+      bio: 'Formado em Administração com ênfase em comércio Exterior pela Universidade UNAERP e formado em Direito pela faculdade Uniesp.',
+      email: 'paulodamin@gmail.com',
+      phone: '(13) 99773-3434',
+      instagram: 'https://instagram.com/joaocosta',
       foto: 'JC',
-      cor: 'from-accent-green to-green-600',
-      experiencia: '12 anos',
-      formacao: 'Pedagogia - UNICAMP'
+      cor: 'from-accent-green to-green-600'
     },
     {
       id: 3,
-      nome: 'Ana Paula Oliveira',
-      cargo: 'Diretora Administrativa',
-      bio: 'Administradora com expertise em gestão financeira e compliance para terceiro setor. CRC ativo, especialista em Controladoria e Auditoria.',
-      email: 'ana.oliveira@institutoinfinitus.org',
-      phone: '(11) 99999-3333',
-      linkedin: 'https://linkedin.com/in/anaoliveira',
+      nome: 'Lucas Vinicius',
+      cargo: 'Secretario Geral',
+      bio: 'Empresario, programador, criador de conteudo digital e cursando Inteligência Artificial e Educaçao Fisica pela UNIASSELVI.',
+      email: 'lucas.vinicius@institutoinfinitusgja.com',
+      phone: '(13) 99136-3128',
+      instagram: 'https://instagram.com/thelucas.vinicius',
       foto: 'AO',
-      cor: 'from-accent-orange to-orange-600',
-      experiencia: '10 anos',
-      formacao: 'Administração - FGV'
+      cor: 'from-accent-orange to-orange-600'
     },
     {
       id: 4,
-      nome: 'Carlos Eduardo Santos',
-      cargo: 'Diretor de Projetos',
-      bio: 'Coordenador de projetos sociais há 10 anos, focado em resultados e impacto social. Formado em Serviço Social pela PUC-SP, especialista em Gestão de Projetos.',
-      email: 'carlos.santos@institutoinfinitus.org',
-      phone: '(11) 99999-4444',
-      linkedin: 'https://linkedin.com/in/carlossantos',
+      nome: 'Rosemere Tabarine Damin',
+      cargo: 'Assistente Social',
+      bio: 'Formada em Serviço Social pela Universidade UNAERP. Cursando Psicologia pela faculdade UNIDON.',
+      email: 'rosedamin@gmail.com',
+      phone: '(013) 99718-5133.',
+      instagram: 'https://instagram.com/carlossantos',
       foto: 'CS',
-      cor: 'from-blue-500 to-blue-600',
-      experiencia: '10 anos',
-      formacao: 'Serviço Social - PUC-SP'
+      cor: 'from-blue-500 to-blue-600'
     },
     {
       id: 5,
-      nome: 'Juliana Ferreira Lima',
-      cargo: 'Diretora de Comunicação',
-      bio: 'Jornalista especializada em comunicação institucional e marketing para causas sociais. Formada pela ECA-USP, pós-graduada em Marketing Digital.',
-      email: 'juliana.lima@institutoinfinitus.org',
-      phone: '(11) 99999-5555',
-      linkedin: 'https://linkedin.com/in/julianalima',
+      nome: 'Edirene Ramalho  Cardoso',
+      cargo: 'Medica',
+      bio: 'Formada em medicina pela universidade de Marília e Residência médica em radiodiagnóstico por imagem pela Santa casa de Santos .',
+      email: 'edireneramalho27@icloud.com',
+      phone: '(13) 99641-4150',
+      instagram: 'https://instagram.com/julianalima',
       foto: 'JL',
-      cor: 'from-purple-500 to-purple-600',
-      experiencia: '8 anos',
-      formacao: 'Jornalismo - ECA-USP'
+      cor: 'from-purple-500 to-purple-600'
     },
     {
       id: 6,
@@ -79,11 +70,9 @@ export default function EquipePage() {
       bio: 'Contador com vasta experiência em gestão financeira e transparência no terceiro setor. CRC ativo, especialista em Controladoria e Auditoria.',
       email: 'roberto.souza@institutoinfinitus.org',
       phone: '(11) 99999-6666',
-      linkedin: 'https://linkedin.com/in/robertosouza',
+      instagram: 'https://instagram.com/robertosouza',
       foto: 'RS',
-      cor: 'from-sage-600 to-sage-700',
-      experiencia: '18 anos',
-      formacao: 'Ciências Contábeis - FECAP'
+      cor: 'from-sage-600 to-sage-700'
     }
   ]
 
@@ -187,9 +176,21 @@ export default function EquipePage() {
               >
                 <CardContent className="pt-6">
                   {/* Avatar */}
-                  <div className={`w-24 h-24 bg-gradient-to-br ${membro.cor} rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold shadow-lg`}>
-                    {membro.foto}
-                  </div>
+                  {membro.foto.startsWith('/') ? (
+                    <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 shadow-lg">
+                      <Image
+                        src={membro.foto}
+                        alt={membro.nome}
+                        width={96}
+                        height={96}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div className={`w-24 h-24 bg-gradient-to-br ${membro.cor} rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold shadow-lg`}>
+                      {membro.foto}
+                    </div>
+                  )}
 
                   {/* Nome e Cargo */}
                   <h3 className="text-xl font-bold text-corporate-dark mb-1">
@@ -198,20 +199,6 @@ export default function EquipePage() {
                   <p className="text-sage-600 font-medium mb-4">
                     {membro.cargo}
                   </p>
-
-                  {/* Informações Profissionais */}
-                  <div className="bg-gray-50 rounded-lg p-3 mb-4 text-sm">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-corporate-light">Experiência:</span>
-                      <span className="font-medium text-corporate-dark">{membro.experiencia}</span>
-                    </div>
-                    <div className="text-left">
-                      <span className="text-corporate-light">Formação:</span>
-                      <div className="font-medium text-corporate-dark text-xs mt-1">
-                        {membro.formacao}
-                      </div>
-                    </div>
-                  </div>
 
                   {/* Bio */}
                   <p className="text-sm text-corporate-light mb-6 leading-relaxed text-left">
@@ -235,13 +222,13 @@ export default function EquipePage() {
                       {membro.phone}
                     </a>
                     <a 
-                      href={membro.linkedin}
+                      href={membro.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center text-sm text-corporate-light hover:text-sage-600 transition-colors"
                     >
-                      <Linkedin size={16} className="mr-2" />
-                      LinkedIn
+                      <Instagram size={16} className="mr-2" />
+                      Instagram
                     </a>
                   </div>
                 </CardContent>
