@@ -27,7 +27,7 @@ export default function EquipePage() {
       email: 'paulodamin@gmail.com',
       phone: '(13) 99773-3434',
       instagram: 'https://instagram.com/joaocosta',
-      foto: 'JC',
+      foto: '/equipe/paulo-damin.png',
       cor: 'from-accent-green to-green-600'
     },
     {
@@ -38,7 +38,7 @@ export default function EquipePage() {
       email: 'lucas.vinicius@institutoinfinitusgja.com',
       phone: '(13) 99136-3128',
       instagram: 'https://instagram.com/thelucas.vinicius',
-      foto: 'AO',
+      foto: '/equipe/lucas-vinicius.png',
       cor: 'from-accent-orange to-orange-600'
     },
     {
@@ -49,7 +49,7 @@ export default function EquipePage() {
       email: 'rosedamin@gmail.com',
       phone: '(013) 99718-5133.',
       instagram: 'https://instagram.com/carlossantos',
-      foto: 'CS',
+      foto: '/equipe/rosemere-damin.png',
       cor: 'from-blue-500 to-blue-600'
     },
     {
@@ -60,7 +60,7 @@ export default function EquipePage() {
       email: 'edireneramalho27@icloud.com',
       phone: '(13) 99641-4150',
       instagram: 'https://instagram.com/julianalima',
-      foto: 'JL',
+      foto: '/equipe/edirene-ramalho.png',
       cor: 'from-purple-500 to-purple-600'
     },
     {
