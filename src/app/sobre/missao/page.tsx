@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card'
-import { Target, Eye, Heart, Users, Lightbulb, Shield, Globe, Handshake, Award } from 'lucide-react'
+import { Target, Eye, Heart, Users, Lightbulb, Shield, Globe, Award, Users2 } from 'lucide-react'
 
 export default function MissaoPage() {
   const pilares = [
@@ -76,7 +76,7 @@ export default function MissaoPage() {
       cor: 'text-sage-600'
     },
     {
-      icon: Handshake,
+      icon: Users2,
       titulo: 'Colaboração',
       descricao: 'Valorizamos parcerias e trabalho em equipe, acreditando que juntos podemos alcançar resultados maiores.',
       cor: 'text-purple-600'

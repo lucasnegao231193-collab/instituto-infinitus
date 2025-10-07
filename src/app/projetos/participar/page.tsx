@@ -427,7 +427,7 @@ export default function ComoParticiparPage() {
                     {depoimento.avatar}
                   </div>
                   <p className="text-corporate-dark italic mb-4 leading-relaxed">
-                    "{depoimento.depoimento}"
+                    &ldquo;{depoimento.depoimento}&rdquo;
                   </p>
                   <div className="text-sm">
                     <div className="font-medium text-corporate-dark">{depoimento.nome}</div>

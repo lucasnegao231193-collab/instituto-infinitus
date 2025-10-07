@@ -191,7 +191,7 @@ export default function HistoriaPage() {
             
             <div className="bg-sage-50 rounded-xl p-8">
               <h3 className="text-xl font-bold text-sage-700 mb-4">
-                "Acreditamos que cada pessoa tem potencial infinito para crescer e transformar sua realidade."
+                &ldquo;Acreditamos que cada pessoa tem potencial infinito para crescer e transformar sua realidade.&rdquo;
               </h3>
               <p className="text-sage-600 italic">
                 - Fundadores do Instituto Infinitus
