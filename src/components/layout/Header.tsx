@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { Menu, X, ChevronDown, User, LogIn, LogOut, Settings } from 'lucide-react'
@@ -88,10 +89,15 @@ const Header: React.FC = () => {
         <div className="container-custom">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-sage-500 to-sage-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">I</span>
-              </div>
+            <Link href="/" className="flex items-center space-x-3">
+              <Image
+                src="/logo-solo.png"
+                alt="Instituto Infinitus"
+                width={48}
+                height={48}
+                className="w-12 h-12"
+                priority
+              />
               <div className="hidden sm:block">
                 <span className="text-xl font-bold text-corporate-dark">
                   Instituto

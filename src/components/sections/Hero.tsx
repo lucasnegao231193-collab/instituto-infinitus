@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { ArrowRight, Play } from 'lucide-react'
 import Button from '@/components/ui/Button'
 
@@ -19,21 +20,17 @@ const Hero: React.FC = () => {
       {/* Content */}
       <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6 fade-in-up">
-            <span className="text-white text-sm font-medium">
-              ✨ Transformando vidas desde 2015
-            </span>
+          {/* Logo */}
+          <div className="flex justify-center mb-8 fade-in-up mt-8">
+            <Image
+              src="/logo.png"
+              alt="Instituto Infinitus"
+              width={400}
+              height={400}
+              className="w-64 md:w-80 lg:w-96 h-auto"
+              priority
+            />
           </div>
-
-          {/* Main Heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 fade-in-up leading-tight">
-            Transformando Vidas,
-            <br />
-            <span className="text-gradient bg-gradient-to-r from-white to-sage-200 bg-clip-text text-transparent">
-              Construindo Futuros
-            </span>
-          </h1>
 
           {/* Description */}
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto fade-in-up">
