@@ -9,25 +9,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Sage Garden Palette
+        // Verde Institucional Instituto Infinitus
         sage: {
-          50: '#f6f8f4',
-          100: '#e9f0e3',
-          200: '#d4e2c8',
-          300: '#C1D8A9', // Sage Green Claro
-          400: '#a3c585',
-          500: '#87A96B', // Sage Green Principal
-          600: '#6B8E23', // Sage Green Escuro
-          700: '#5a7a1e',
-          800: '#4a651a',
-          900: '#3e5318',
+          50: '#f0f5f2',
+          100: '#d9e8df',
+          200: '#b3d1bf',
+          300: '#8cba9f',
+          400: '#66a37f',
+          500: '#2F723E', // Verde Institucional Principal
+          600: '#265a32',
+          700: '#1d4325',
+          800: '#132b19',
+          900: '#0a140c',
         },
         corporate: {
           dark: '#2F4F4F', // Azul Corporativo
           light: '#708090', // Azul Claro
         },
         accent: {
-          green: '#4CAF50', // Verde Vibrante
+          green: '#2F723E', // Verde Institucional
           orange: '#FF9800', // Laranja Institucional
           red: '#E53935', // Vermelho Social
         },
