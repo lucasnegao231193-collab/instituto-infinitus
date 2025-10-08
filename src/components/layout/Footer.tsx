@@ -13,36 +13,25 @@ const Footer: React.FC = () => {
       { name: 'Missão e Valores', href: '/sobre/missao' },
       { name: 'Nossa Equipe', href: '/sobre/equipe' },
       { name: 'Transparência', href: '/transparencia' },
-      { name: 'Relatórios', href: '/relatorios' },
+      { name: 'Contato', href: '/contato' },
     ],
     projects: [
-      { name: 'Projetos Ativos', href: '/projetos/ativos' },
-      { name: 'Como Participar', href: '/projetos/participar' },
-      { name: 'Seja Voluntário', href: '/voluntarios' },
-      { name: 'Faça uma Doação', href: '/doacoes' },
-      { name: 'Parceiros', href: '/parceiros' },
-    ],
-    resources: [
+      { name: 'Nossos Projetos', href: '/projetos' },
       { name: 'Eventos', href: '/eventos' },
       { name: 'Notícias', href: '/noticias' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Galeria', href: '/galeria' },
-      { name: 'FAQ', href: '/faq' },
+    ],
+    participate: [
+      { name: 'Doe Agora', href: '/doacao' },
+      { name: 'Seja Voluntário', href: '/voluntariado' },
     ],
     legal: [
-      { name: 'Termos de Uso', href: '/termos' },
       { name: 'Política de Privacidade', href: '/privacidade' },
-      { name: 'Cookies', href: '/cookies' },
-      { name: 'LGPD', href: '/lgpd' },
     ],
   }
 
   const socialLinks = [
-    { name: 'Facebook', href: 'https://facebook.com', icon: Facebook },
-    { name: 'Instagram', href: 'https://instagram.com', icon: Instagram },
-    { name: 'Twitter', href: 'https://twitter.com', icon: Twitter },
-    { name: 'LinkedIn', href: 'https://linkedin.com', icon: Linkedin },
-    { name: 'YouTube', href: 'https://youtube.com', icon: Youtube },
+    { name: 'Instagram', href: 'https://instagram.com/institutoinfinitusgja', icon: Instagram },
+    { name: 'Facebook', href: 'https://facebook.com/institutoinfinitusgja', icon: Facebook },
   ]
 
   return (
@@ -52,32 +41,32 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand Section */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-sage-500 to-sage-600 rounded-lg flex items-center justify-center">
+            <Link href="/" className="flex items-center space-x-2 mb-4 group">
+              <div className="w-10 h-10 bg-gradient-to-br from-sage-500 to-sage-600 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform">
                 <span className="text-white font-bold text-xl">I</span>
               </div>
               <div>
                 <span className="text-lg font-bold">Instituto</span>
                 <span className="text-lg font-bold text-sage-400 ml-1">Infinitus</span>
               </div>
-            </div>
+            </Link>
             <p className="text-gray-300 text-sm mb-6">
-              Transformando vidas e construindo futuros através da educação, cultura e desenvolvimento comunitário.
+              Transformando vidas no Guarujá através da educação, esporte e desenvolvimento comunitário.
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3">
-              <a href="mailto:contato@institutoinfinitus.org" className="flex items-center space-x-2 text-sm text-gray-300 hover:text-sage-400 transition-colors">
+              <a href="mailto:contato@institutoinfinitusgja.com" className="flex items-center space-x-2 text-sm text-gray-300 hover:text-sage-400 transition-colors">
                 <Mail size={16} />
-                <span>contato@institutoinfinitus.org</span>
+                <span>contato@institutoinfinitusgja.com</span>
               </a>
-              <a href="tel:+5511999999999" className="flex items-center space-x-2 text-sm text-gray-300 hover:text-sage-400 transition-colors">
+              <a href="https://wa.me/5513991363128" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-sm text-gray-300 hover:text-sage-400 transition-colors">
                 <Phone size={16} />
-                <span>(11) 99999-9999</span>
+                <span>(13) 99136-3128</span>
               </a>
               <div className="flex items-start space-x-2 text-sm text-gray-300">
                 <MapPin size={16} className="mt-0.5" />
-                <span>Rua Exemplo, 123<br />São Paulo - SP, 01234-567</span>
+                <span>Av. Santos Dumont, 3651<br />Guarujá - SP, 11460-002</span>
               </div>
             </div>
           </div>
@@ -101,7 +90,7 @@ const Footer: React.FC = () => {
 
           {/* Projects Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Projetos e Ações</h3>
+            <h3 className="text-lg font-semibold mb-4">Ações</h3>
             <ul className="space-y-2">
               {footerLinks.projects.map((link) => (
                 <li key={link.name}>
@@ -116,11 +105,11 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Resources Links */}
+          {/* Participate Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Recursos</h3>
+            <h3 className="text-lg font-semibold mb-4">Participe</h3>
             <ul className="space-y-2 mb-6">
-              {footerLinks.resources.map((link) => (
+              {footerLinks.participate.map((link) => (
                 <li key={link.name}>
                   <Link 
                     href={link.href}

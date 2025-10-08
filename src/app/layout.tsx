@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Montserrat, Poppins } from 'next/font/google'
 import { AuthProvider } from '@/contexts/AuthContext'
+import WhatsAppFloat from '@/components/ui/WhatsAppFloat'
 import './globals.css'
 
 const montserrat = Montserrat({
@@ -17,9 +18,9 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'Instituto Infinitus - Transformando Vidas, Construindo Futuros',
-  description: 'O Instituto Infinitus é uma organização dedicada à transformação social através de projetos educacionais, culturais e de desenvolvimento comunitário.',
-  keywords: ['instituto', 'social', 'educação', 'transformação', 'comunidade', 'voluntariado'],
+  title: 'Instituto Infinitus – Projetos sociais no Guarujá',
+  description: 'Apoie iniciativas locais em educação, esporte e cidadania no Guarujá. Doe ou torne-se voluntário no Instituto Infinitus.',
+  keywords: ['instituto infinitus', 'ong guarujá', 'projetos sociais', 'educação', 'voluntariado', 'doação', 'guarujá'],
   authors: [{ name: 'Instituto Infinitus' }],
   creator: 'Instituto Infinitus',
   publisher: 'Instituto Infinitus',
@@ -28,17 +29,20 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://instituto-infinitus.vercel.app'),
+  metadataBase: new URL('https://institutoinfinitusgja.com'),
+  alternates: {
+    canonical: 'https://institutoinfinitusgja.com/',
+  },
   openGraph: {
-    title: 'Instituto Infinitus - Transformando Vidas, Construindo Futuros',
-    description: 'Organização dedicada à transformação social através de projetos educacionais e desenvolvimento comunitário.',
-    url: 'https://instituto-infinitus.vercel.app',
+    title: 'Instituto Infinitus – Projetos sociais no Guarujá',
+    description: 'Apoie iniciativas locais em educação, esporte e cidadania. Doe ou torne-se voluntário.',
+    url: 'https://institutoinfinitusgja.com',
     siteName: 'Instituto Infinitus',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/logo.png',
         width: 1200,
-        height: 630,
+        height: 1200,
         alt: 'Instituto Infinitus',
       },
     ],
@@ -47,9 +51,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Instituto Infinitus - Transformando Vidas, Construindo Futuros',
-    description: 'Organização dedicada à transformação social através de projetos educacionais e desenvolvimento comunitário.',
-    images: ['/og-image.jpg'],
+    title: 'Instituto Infinitus – Projetos sociais no Guarujá',
+    description: 'Apoie iniciativas locais em educação, esporte e cidadania. Doe ou torne-se voluntário.',
+    images: ['/logo.png'],
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/logo.png',
   },
   robots: {
     index: true,
@@ -71,9 +80,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={`${montserrat.variable} ${poppins.variable}`}>
+      <head>
+        <link rel="canonical" href="https://institutoinfinitusgja.com/" />
+      </head>
       <body className="antialiased">
         <AuthProvider>
           {children}
+          <WhatsAppFloat />
         </AuthProvider>
       </body>
     </html>

@@ -11,25 +11,28 @@ export default function ContatoPage() {
     {
       icon: MapPin,
       title: 'Endereço',
-      info: 'Rua Exemplo, 123\nSão Paulo - SP\nCEP: 01234-567',
+      info: 'Av. Santos Dumont, 3651\nSítio Pae Cara (Vicente de Carvalho)\nGuarujá - SP, 11460-002',
+      link: 'https://maps.google.com/?q=Av.+Santos+Dumont,+3651,+Guaruja,+SP',
       color: 'text-sage-600'
     },
     {
       icon: Phone,
-      title: 'Telefone',
-      info: '(11) 99999-9999\n(11) 3333-4444',
+      title: 'WhatsApp',
+      info: '(13) 99136-3128',
+      link: 'https://wa.me/5513991363128',
       color: 'text-accent-green'
     },
     {
       icon: Mail,
       title: 'E-mail',
-      info: 'contato@institutoinfinitus.org\nvoluntarios@institutoinfinitus.org',
+      info: 'contato@institutoinfinitusgja.com',
+      link: 'mailto:contato@institutoinfinitusgja.com',
       color: 'text-accent-orange'
     },
     {
       icon: Clock,
       title: 'Horário',
-      info: 'Segunda a Sexta\n9h às 18h\nSábado: 9h às 12h',
+      info: 'Segunda a Sexta\n9h às 18h',
       color: 'text-blue-600'
     }
   ]
@@ -59,8 +62,8 @@ export default function ContatoPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contatos.map((contato, index) => {
               const Icon = contato.icon
-              return (
-                <Card key={index} hover className="text-center">
+              const content = (
+                <>
                   <CardHeader>
                     <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Icon className={contato.color} size={32} />
@@ -72,6 +75,18 @@ export default function ContatoPage() {
                       {contato.info}
                     </p>
                   </CardContent>
+                </>
+              )
+
+              return contato.link ? (
+                <a key={index} href={contato.link} target="_blank" rel="noopener noreferrer">
+                  <Card hover className="text-center h-full transition-all duration-300 hover:shadow-xl">
+                    {content}
+                  </Card>
+                </a>
+              ) : (
+                <Card key={index} hover className="text-center">
+                  {content}
                 </Card>
               )
             })}
@@ -169,7 +184,7 @@ export default function ContatoPage() {
         </div>
       </section>
 
-      {/* Mapa (Placeholder) */}
+      {/* Mapa */}
       <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="text-center mb-8">
@@ -178,14 +193,17 @@ export default function ContatoPage() {
             </h2>
           </div>
           
-          <div className="bg-gray-200 rounded-xl h-96 flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="text-sage-600 mx-auto mb-4" size={48} />
-              <p className="text-corporate-dark font-medium">Mapa Interativo</p>
-              <p className="text-sm text-corporate-light">
-                Rua Exemplo, 123 - São Paulo, SP
-              </p>
-            </div>
+          <div className="rounded-xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3645.123456789!2d-46.2876543!3d-23.9876543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDU5JzE1LjYiUyA0NsKwMTcnMTUuNiJX!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Localização do Instituto Infinitus"
+            />
           </div>
         </div>
       </section>

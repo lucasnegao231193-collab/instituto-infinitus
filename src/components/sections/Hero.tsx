@@ -2,7 +2,8 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { ArrowRight, Play } from 'lucide-react'
+import Link from 'next/link'
+import { Heart, Users } from 'lucide-react'
 import Button from '@/components/ui/Button'
 
 const Hero: React.FC = () => {
@@ -40,22 +41,26 @@ const Hero: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 fade-in-up">
-            <Button
-              variant="primary"
-              size="lg"
-              rightIcon={<ArrowRight size={20} />}
-              className="bg-white text-sage-600 hover:bg-gray-50 hover:scale-105"
-            >
-              Conheça Nossos Projetos
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              leftIcon={<Play size={20} />}
-              className="border-white text-white hover:bg-white/10"
-            >
-              Assista ao Vídeo
-            </Button>
+            <Link href="/doacao">
+              <Button
+                variant="primary"
+                size="lg"
+                leftIcon={<Heart size={20} />}
+                className="bg-white text-sage-600 hover:bg-gray-50 hover:scale-105"
+              >
+                Doe Agora
+              </Button>
+            </Link>
+            <Link href="/voluntariado">
+              <Button
+                variant="outline"
+                size="lg"
+                leftIcon={<Users size={20} />}
+                className="border-white text-white hover:bg-white/10"
+              >
+                Quero Ser Voluntário
+              </Button>
+            </Link>
           </div>
 
           {/* Stats */}

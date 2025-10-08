@@ -50,6 +50,8 @@ const Header: React.FC = () => {
     },
     { name: 'Eventos', href: '/eventos' },
     { name: 'Notícias', href: '/noticias' },
+    { name: 'Doação', href: '/doacao' },
+    { name: 'Voluntariado', href: '/voluntariado' },
     { name: 'Contato', href: '/contato' },
   ]
 
