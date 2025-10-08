@@ -1,0 +1,39 @@
+{
+  "projects": [
+    {
+      "project_slug": "escola-de-moda",
+      "count": 130,
+      "cover": "escola-de-moda_109.jpg",
+      "sample_files": [
+        "escola-de-moda_001.jpg",
+        "escola-de-moda_002.jpg",
+        "escola-de-moda_003.jpg"
+      ]
+    },
+    {
+      "project_slug": "culinaria-idosos",
+      "count": 0,
+      "cover": null,
+      "sample_files": []
+    },
+    {
+      "project_slug": "meio-ambiente",
+      "count": 0,
+      "cover": null,
+      "sample_files": []
+    },
+    {
+      "project_slug": "dia-do-idoso",
+      "count": 0,
+      "cover": null,
+      "sample_files": []
+    },
+    {
+      "project_slug": "cmpi-compede",
+      "count": 0,
+      "cover": null,
+      "sample_files": []
+    }
+  ],
+  "note": "Arquivos copiados e renomeados em /mnt/data/organized_projetos/<slug>. Confira as capas sugeridas."
+}

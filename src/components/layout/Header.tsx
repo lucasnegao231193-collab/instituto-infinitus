@@ -44,7 +44,7 @@ const Header: React.FC = () => {
       href: '/projetos',
       submenu: [
         { name: 'Projetos Ativos', href: '/projetos/ativos' },
-        { name: 'Projetos Concluídos', href: '/projetos/concluidos' },
+        { name: 'Projetos Concluídos', href: '/projetos-concluidos' },
         { name: 'Como Participar', href: '/projetos/participar' },
       ]
     },
