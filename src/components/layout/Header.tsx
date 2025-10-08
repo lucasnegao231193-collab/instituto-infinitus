@@ -50,9 +50,15 @@ const Header: React.FC = () => {
     },
     { name: 'Eventos', href: '/eventos' },
     { name: 'Notícias', href: '/noticias' },
-    { name: 'Doação', href: '/doacao' },
-    { name: 'Voluntariado', href: '/voluntariado' },
-    { name: 'Contato', href: '/contato' },
+    { 
+      name: 'Contato', 
+      href: '/contato',
+      submenu: [
+        { name: 'Fale Conosco', href: '/contato' },
+        { name: 'Doe Agora', href: '/doacao' },
+        { name: 'Seja Voluntário', href: '/voluntariado' },
+      ]
+    },
   ]
 
   const isActiveLink = (href: string) => {
