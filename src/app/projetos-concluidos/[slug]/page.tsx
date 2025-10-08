@@ -17,88 +17,25 @@ interface ProjectData {
   images: string[]
 }
 
+// Gerar array com todas as 130 imagens da Escola de Moda
+const generateEscolaDeModaImages = () => {
+  const images: string[] = []
+  for (let i = 1; i <= 130; i++) {
+    const num = i.toString().padStart(3, '0')
+    images.push(`/projetos-concluidos/escola-de-moda/escola-de-moda_${num}.jpg`)
+  }
+  return images
+}
+
 const projectsData: Record<string, ProjectData> = {
   "escola-de-moda": {
     title: "Escola de Moda",
     description: "Um projeto que costurou sonhos e autoestima, ensinando técnicas de corte e costura para mulheres do Guarujá.",
     fullDescription: "A Escola de Moda foi um projeto transformador que capacitou mulheres da comunidade do Guarujá em técnicas profissionais de corte, costura e modelagem. Mais do que ensinar uma profissão, o projeto promoveu autoestima, autonomia financeira e geração de renda. As alunas aprenderam desde o básico até técnicas avançadas, criando suas próprias peças e descobrindo talentos escondidos. Muitas saíram do curso com suas próprias confecções, transformando hobby em negócio e sonhos em realidade.",
-    cover: "/projetos-concluidos/escola-de-moda/escola-de-moda_001.jpg",
-    images: [
-      "/projetos-concluidos/escola-de-moda/escola-de-moda_001.jpg",
-      "/projetos-concluidos/escola-de-moda/escola-de-moda_002.jpg",
-      "/projetos-concluidos/escola-de-moda/escola-de-moda_003.jpg",
-      "/projetos-concluidos/escola-de-moda/escola-de-moda_004.jpg",
-      "/projetos-concluidos/escola-de-moda/escola-de-moda_005.jpg",
-      "/projetos-concluidos/escola-de-moda/escola-de-moda_006.jpg",
-    ]
-  },
-  "culinaria-idosos": {
-    title: "Culinária com a População Idosa",
-    description: "Momentos de afeto e sabor, onde a terceira idade compartilhou receitas e histórias em uma troca cheia de carinho.",
-    fullDescription: "O projeto Culinária com a População Idosa criou um espaço acolhedor onde a terceira idade pôde compartilhar receitas tradicionais, histórias de vida e muito carinho. Mais do que cozinhar, o projeto promoveu integração social, valorização da sabedoria dos mais velhos e combate à solidão. Cada encontro foi recheado de sabores, risos e afeto, fortalecendo laços comunitários e resgatando a importância do convívio intergeracional.",
-    cover: "/projetos-concluidos/culinaria-idosos/culinaria-idosos_001.jpg",
-    images: [
-      "/projetos-concluidos/culinaria-idosos/culinaria-idosos_001.jpg",
-      "/projetos-concluidos/culinaria-idosos/culinaria-idosos_002.jpg",
-      "/projetos-concluidos/culinaria-idosos/culinaria-idosos_003.jpg",
-      "/projetos-concluidos/culinaria-idosos/culinaria-idosos_004.jpg",
-      "/projetos-concluidos/culinaria-idosos/culinaria-idosos_005.jpg",
-      "/projetos-concluidos/culinaria-idosos/culinaria-idosos_006.jpg",
-      "/projetos-concluidos/culinaria-idosos/culinaria-idosos_007.jpg",
-      "/projetos-concluidos/culinaria-idosos/culinaria-idosos_008.jpg",
-    ]
-  },
-  "meio-ambiente": {
-    title: "Meio Ambiente, Hortas e Resíduos Sólidos",
-    description: "Educação ambiental em ação: hortas, reciclagem e consciência ecológica para um Guarujá mais verde.",
-    fullDescription: "Este projeto trouxe educação ambiental para a prática com a criação de hortas comunitárias, oficinas de reciclagem e conscientização sobre gestão de resíduos sólidos. Crianças, jovens e adultos aprenderam sobre sustentabilidade, cultivo de alimentos orgânicos e a importância de cuidar do meio ambiente. As hortas se tornaram espaços de aprendizado, integração e fonte de alimentos saudáveis para a comunidade, enquanto as ações de reciclagem ajudaram a criar uma consciência coletiva sobre o consumo responsável.",
-    cover: "/projetos-concluidos/meio-ambiente/meio-ambiente_001.jpg",
-    images: [
-      "/projetos-concluidos/meio-ambiente/meio-ambiente_001.jpg",
-      "/projetos-concluidos/meio-ambiente/meio-ambiente_002.jpg",
-      "/projetos-concluidos/meio-ambiente/meio-ambiente_003.jpg",
-      "/projetos-concluidos/meio-ambiente/meio-ambiente_004.jpg",
-      "/projetos-concluidos/meio-ambiente/meio-ambiente_005.jpg",
-      "/projetos-concluidos/meio-ambiente/meio-ambiente_006.jpg",
-      "/projetos-concluidos/meio-ambiente/meio-ambiente_007.jpg",
-      "/projetos-concluidos/meio-ambiente/meio-ambiente_008.jpg",
-    ]
-  },
-  "dia-do-idoso": {
-    title: "Dia Internacional do Idoso",
-    description: "Uma celebração cheia de sorrisos, música e reconhecimento à sabedoria e força da melhor idade.",
-    fullDescription: "A celebração do Dia Internacional do Idoso foi um momento especial de reconhecimento, alegria e homenagem à terceira idade. O evento contou com apresentações musicais, atividades recreativas, homenagens emocionantes e muita confraternização. Foi um dia dedicado a valorizar a sabedoria, experiência e contribuição dos nossos idosos para a sociedade, promovendo respeito, dignidade e inclusão. Sorrisos, abraços e lágrimas de emoção marcaram essa celebração inesquecível.",
-    cover: "/projetos-concluidos/dia-do-idoso/dia-do-idoso_001.jpg",
-    images: [
-      "/projetos-concluidos/dia-do-idoso/dia-do-idoso_001.jpg",
-      "/projetos-concluidos/dia-do-idoso/dia-do-idoso_002.jpg",
-      "/projetos-concluidos/dia-do-idoso/dia-do-idoso_003.jpg",
-      "/projetos-concluidos/dia-do-idoso/dia-do-idoso_004.jpg",
-      "/projetos-concluidos/dia-do-idoso/dia-do-idoso_005.jpg",
-      "/projetos-concluidos/dia-do-idoso/dia-do-idoso_006.jpg",
-      "/projetos-concluidos/dia-do-idoso/dia-do-idoso_007.jpg",
-      "/projetos-concluidos/dia-do-idoso/dia-do-idoso_008.jpg",
-      "/projetos-concluidos/dia-do-idoso/dia-do-idoso_009.jpg",
-    ]
-  },
-  "cmpi-compede": {
-    title: "CMPI / COMPEDE",
-    description: "Ações conjuntas pela inclusão e acessibilidade, fortalecendo os conselhos e a voz da comunidade.",
-    fullDescription: "As ações do CMPI (Conselho Municipal da Pessoa Idosa) e COMPEDE (Conselho Municipal da Pessoa com Deficiência) foram fundamentais para fortalecer a voz da comunidade e promover inclusão e acessibilidade no Guarujá. O Instituto Infinitus participou ativamente de reuniões, eventos e articulações políticas para garantir direitos, políticas públicas e espaços mais acessíveis para idosos e pessoas com deficiência. Essas ações reforçam nosso compromisso com a cidadania plena e a justiça social.",
-    cover: "/projetos-concluidos/cmpi-compede/cmpi-compede_001.jpg",
-    images: [
-      "/projetos-concluidos/cmpi-compede/cmpi-compede_001.jpg",
-      "/projetos-concluidos/cmpi-compede/cmpi-compede_002.jpg",
-      "/projetos-concluidos/cmpi-compede/cmpi-compede_003.jpg",
-      "/projetos-concluidos/cmpi-compede/cmpi-compede_004.jpg",
-      "/projetos-concluidos/cmpi-compede/cmpi-compede_005.jpg",
-      "/projetos-concluidos/cmpi-compede/cmpi-compede_006.jpg",
-      "/projetos-concluidos/cmpi-compede/cmpi-compede_007.jpg",
-      "/projetos-concluidos/cmpi-compede/cmpi-compede_008.jpg",
-      "/projetos-concluidos/cmpi-compede/cmpi-compede_009.jpg",
-      "/projetos-concluidos/cmpi-compede/cmpi-compede_010.jpg",
-    ]
+    cover: "/projetos-concluidos/escola-de-moda/escola-de-moda_109.jpg",
+    images: generateEscolaDeModaImages()
   }
+  // Outros projetos serão adicionados quando as imagens estiverem disponíveis
 }
 
 export default function ProjetoConcluidoPage({ params }: { params: { slug: string } }) {

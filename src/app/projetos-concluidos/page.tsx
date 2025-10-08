@@ -20,32 +20,9 @@ const projects: Project[] = [
     slug: "escola-de-moda",
     title: "Escola de Moda",
     description: "Um projeto que costurou sonhos e autoestima, ensinando técnicas de corte e costura para mulheres do Guarujá.",
-    cover: "/projetos-concluidos/escola-de-moda/escola-de-moda_001.jpg"
-  },
-  {
-    slug: "culinaria-idosos",
-    title: "Culinária com a População Idosa",
-    description: "Momentos de afeto e sabor, onde a terceira idade compartilhou receitas e histórias em uma troca cheia de carinho.",
-    cover: "/projetos-concluidos/culinaria-idosos/culinaria-idosos_001.jpg"
-  },
-  {
-    slug: "meio-ambiente",
-    title: "Meio Ambiente, Hortas e Resíduos Sólidos",
-    description: "Educação ambiental em ação: hortas, reciclagem e consciência ecológica para um Guarujá mais verde.",
-    cover: "/projetos-concluidos/meio-ambiente/meio-ambiente_001.jpg"
-  },
-  {
-    slug: "dia-do-idoso",
-    title: "Dia Internacional do Idoso",
-    description: "Uma celebração cheia de sorrisos, música e reconhecimento à sabedoria e força da melhor idade.",
-    cover: "/projetos-concluidos/dia-do-idoso/dia-do-idoso_001.jpg"
-  },
-  {
-    slug: "cmpi-compede",
-    title: "CMPI / COMPEDE",
-    description: "Ações conjuntas pela inclusão e acessibilidade, fortalecendo os conselhos e a voz da comunidade.",
-    cover: "/projetos-concluidos/cmpi-compede/cmpi-compede_001.jpg"
+    cover: "/projetos-concluidos/escola-de-moda/escola-de-moda_109.jpg"
   }
+  // Outros projetos serão adicionados quando as imagens estiverem disponíveis
 ]
 
 export default function ProjetosConcluidosPage() {
